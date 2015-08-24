@@ -176,13 +176,13 @@ class TaggerImpl : public Tagger {
 
   const char* what() { return what_.str(); }
 
- private:
   void forwardbackward();
   void viterbi();
   void buildLattice();
   bool initNbest();
   bool add2(size_t, const char **, bool);
 
+ private:
   struct QueueElement {
     Node *node;
     QueueElement *next;
